@@ -1,0 +1,13 @@
+<script>
+</script>
+
+<template>
+<div>
+  <p>Welcome to Raven</p>
+  <p>Configure this project by editing <code>'lib/App.phs'</code></p>
+</div>
+</template>
+
+<style>
+</style>
+  

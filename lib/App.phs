@@ -1,0 +1,18 @@
+<script>
+import 'components/Component.phs' as Component;
+String helloWorld = "Hello, World!";
+</script>
+
+<template>
+<div id="hello">
+  <p>{{helloWorld}}</p>
+  <Component />
+</div>
+</template>
+
+<style>
+#hello {
+  color: aquamarine;
+}
+</style>
+  
