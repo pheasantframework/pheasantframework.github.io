@@ -14,7 +14,7 @@ jobs:
       - run: dart pub global activate pheasant_cli
       # TODO: Work on CLI to Avoid This
       - run: dart pub global activate webdev
-      - run: pheasant build --release
+      - run: pheasant build --release -o docs
       - run: git config user.name github-actions
       - run: git config user.email github-actions@github.com
       - run: git --work-tree build add --all
