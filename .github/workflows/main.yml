@@ -18,11 +18,8 @@ jobs:
       # TODO: Work on CLI to Avoid This
       - run: dart pub global activate webdev
       - run: pheasant build --release 
-      - uses: actions/upload-artifact@master
+      - uses: actions/upload-pages-artifact@v3
         with:
-          name: page
           path: build
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v4.0.5
-        with:
-          artifact_name: page
