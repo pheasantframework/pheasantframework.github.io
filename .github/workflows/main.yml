@@ -15,8 +15,11 @@ jobs:
       # TODO: Work on CLI to Avoid This
       - run: dart pub global activate webdev
       - run: pheasant build --release 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: actions/upload-artifact@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          name: page
+          path: build
+      - name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v4.0.5
+        with:
+          artifact_name: page
